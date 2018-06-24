@@ -113,7 +113,7 @@ var ReactTags = function (_Component) {
   }, {
     key: 'resetAndFocusInput',
     value: function resetAndFocusInput() {
-      this.setState({ query: '' });
+      this.setState({ query: '', suggestions: this.props.suggestions });
       if (this.textInput) {
         this.textInput.value = '';
         this.textInput.focus();
@@ -144,9 +144,7 @@ var ReactTags = function (_Component) {
   }, {
     key: 'componentWillReceiveProps',
     value: function componentWillReceiveProps(props) {
-      var suggestions = this.filteredSuggestions(this.state.query, props.suggestions);
       this.setState({
-        suggestions: suggestions,
         classNames: _extends({}, _constants.DEFAULT_CLASSNAMES, props.classNames)
       });
     }
