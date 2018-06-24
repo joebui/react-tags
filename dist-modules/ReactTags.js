@@ -325,8 +325,7 @@ var ReactTags = function (_Component) {
       this.setState({
         query: '',
         selectionMode: false,
-        selectedIndex: -1,
-        suggestions: this.props.suggestions
+        selectedIndex: -1
       });
 
       this.resetAndFocusInput();
